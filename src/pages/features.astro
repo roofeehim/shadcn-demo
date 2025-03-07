@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="特徴紹介 - shadcn + Astro">
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-10">特徴紹介</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+      <div>
+        <h2 class="text-2xl font-bold mb-5">Astroフレームワーク</h2>
+        <div class="prose dark:prose-invert">
+          <p class="mb-4">
+            Astroは、高性能なウェブサイト構築のための最新のウェブフレームワークです。
+            以下の主要な特徴を備えています：
+          </p>
+          <ul class="space-y-2 list-disc pl-5">
+            <li>アイランドアーキテクチャによる最小限のJavaScript</li>
+            <li>マルチフレームワークのサポート（React、Vue、Svelteなど）</li>
+            <li>優れたパフォーマンス最適化</li>
+            <li>ビルド時の静的サイト生成</li>
+            <li>部分的なハイドレーションによる効率的なクライアントサイドレンダリング</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold mb-5">shadcn/ui</h2>
+        <div class="prose dark:prose-invert">
+          <p class="mb-4">
+            shadcn/uiは、美しくカスタマイズ可能なUIコンポーネントのコレクションです。
+            以下の特徴があります：
+          </p>
+          <ul class="space-y-2 list-disc pl-5">
+            <li>コピー＆ペーストで利用可能なコンポーネント</li>
+            <li>Tailwind CSSとRadix UIを基にした設計</li>
+            <li>アクセシビリティを考慮した実装</li>
+            <li>ダークモードのサポート</li>
+            <li>高度にカスタマイズ可能</li>
+            <li>TypeScriptのサポート</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-muted/30 p-6 rounded-lg mb-16">
+      <h2 class="text-2xl font-bold mb-5">組み合わせのメリット</h2>
+      <div class="prose dark:prose-invert max-w-none">
+        <p class="mb-4">
+          Astroとshadcnを組み合わせることで、以下のようなメリットが得られます：
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc pl-5">
+          <li>高速なパフォーマンスと美しいUIの両立</li>
+          <li>モダンな開発体験とコンポーネント指向設計</li>
+          <li>最小限のJavaScriptでインタラクティブなUI</li>
+          <li>サーバーとクライアントのハイブリッドレンダリング</li>
+          <li>SEOフレンドリーなウェブサイト構築</li>
+          <li>拡張性と柔軟性のある実装</li>
+          <li>優れたデベロッパーエクスペリエンス</li>
+          <li>将来性のある技術スタック</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <a
+        href="/components"
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary text-primary-foreground h-10 px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        コンポーネント例を見る
+      </a>
+    </div>
+  </div>
+</BaseLayout> 

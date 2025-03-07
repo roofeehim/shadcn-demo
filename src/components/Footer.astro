@@ -1,0 +1,42 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t bg-muted/40 py-8">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-semibold mb-3">shadcn Demo</h3>
+        <p class="text-sm text-muted-foreground">
+          Astroとshadcn/uiを活用した高性能なウェブサイト制作のデモです。
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">ページ</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/" class="hover:underline">ホーム</a></li>
+          <li><a href="/features" class="hover:underline">特徴</a></li>
+          <li><a href="/components" class="hover:underline">コンポーネント</a></li>
+          <li><a href="/form-example" class="hover:underline">フォーム例</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">リソース</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/docs" class="hover:underline">ドキュメント</a></li>
+          <li><a href="https://ui.shadcn.com" class="hover:underline">shadcn/ui</a></li>
+          <li><a href="https://astro.build" class="hover:underline">Astro</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3">お問い合わせ</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/contact" class="hover:underline">お問い合わせフォーム</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 pt-6 border-t text-center text-sm text-muted-foreground">
+      &copy; {currentYear} shadcn Demo. All rights reserved.
+    </div>
+  </div>
+</footer> 

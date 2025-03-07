@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="お問い合わせ - shadcn + Astro">
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-10">お問い合わせ</h1>
+
+    <div class="max-w-lg mx-auto">
+      <form class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-2">お名前</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="山田 太郎"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium mb-2">メールアドレス</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="example@example.com"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="subject" class="block text-sm font-medium mb-2">件名</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="お問い合わせ内容の件名"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium mb-2">メッセージ</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            placeholder="お問い合わせ内容を入力してください"
+            required
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary text-primary-foreground h-10 px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          送信する
+        </button>
+      </form>
+
+      <div class="mt-12 pt-6 border-t">
+        <h2 class="text-xl font-bold mb-4">その他のお問い合わせ方法</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-base font-semibold">Eメール</h3>
+            <p class="text-muted-foreground">info@example.com</p>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold">所在地</h3>
+            <p class="text-muted-foreground">〒100-0001 東京都千代田区千代田1-1</p>
+          </div>
+          <div>
+            <h3 class="text-base font-semibold">営業時間</h3>
+            <p class="text-muted-foreground">平日 9:00〜18:00（土日祝休み）</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout> 

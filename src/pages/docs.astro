@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="ドキュメント - shadcn + Astro">
+  <div class="container mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-6">ドキュメント</h1>
+    <p class="text-muted-foreground mb-10">Astroとshadcn UIを使ったウェブサイト構築のガイド</p>
+    
+    <div class="grid md:grid-cols-[250px_1fr] gap-8">
+      <!-- サイドバー -->
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-medium mb-2">はじめに</h3>
+          <ul class="space-y-1">
+            <li><a href="#introduction" class="text-sm hover:underline text-muted-foreground hover:text-foreground">イントロダクション</a></li>
+            <li><a href="#installation" class="text-sm hover:underline text-muted-foreground hover:text-foreground">インストール</a></li>
+            <li><a href="#project-structure" class="text-sm hover:underline text-muted-foreground hover:text-foreground">プロジェクト構造</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-medium mb-2">コンポーネント</h3>
+          <ul class="space-y-1">
+            <li><a href="#buttons" class="text-sm hover:underline text-muted-foreground hover:text-foreground">ボタン</a></li>
+            <li><a href="#forms" class="text-sm hover:underline text-muted-foreground hover:text-foreground">フォーム</a></li>
+            <li><a href="#theme" class="text-sm hover:underline text-muted-foreground hover:text-foreground">テーマ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-medium mb-2">応用</h3>
+          <ul class="space-y-1">
+            <li><a href="#customization" class="text-sm hover:underline text-muted-foreground hover:text-foreground">カスタマイズ</a></li>
+            <li><a href="#deployment" class="text-sm hover:underline text-muted-foreground hover:text-foreground">デプロイ</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- メインコンテンツ -->
+      <div class="space-y-12">
+        <section id="introduction" class="prose dark:prose-invert max-w-none">
+          <h2>イントロダクション</h2>
+          <p>
+            このプロジェクトは、AstroとshadcnUIを組み合わせた高性能なウェブサイト構築のためのデモです。
+            Astroのパフォーマンスとshadcnのデザインシステムを融合させることで、高速で美しいウェブサイトを構築することができます。
+          </p>
+          <p>
+            <strong>主な特徴：</strong>
+          </p>
+          <ul>
+            <li>Astroのアイランドアーキテクチャによる高速なパフォーマンス</li>
+            <li>shadcnUIによる美しく一貫性のあるデザイン</li>
+            <li>ダークモード対応</li>
+            <li>レスポンシブデザイン</li>
+            <li>アクセシビリティに配慮</li>
+          </ul>
+        </section>
+        
+        <section id="installation" class="prose dark:prose-invert max-w-none">
+          <h2>インストール</h2>
+          <p>
+            以下のコマンドでプロジェクトをセットアップすることができます：
+          </p>
+          <pre class="bg-muted p-4 rounded-md overflow-x-auto"><code># プロジェクトの作成
+npm create astro@latest my-project
+cd my-project
+
+# Tailwind CSSのインストール
+npx astro add tailwind
+
+# Reactのインストール
+npx astro add react
+
+# shadcn UIの設定
+npx shadcn-ui@latest init</code></pre>
+        </section>
+        
+        <section id="project-structure" class="prose dark:prose-invert max-w-none">
+          <h2>プロジェクト構造</h2>
+          <p>
+            推奨されるプロジェクト構造は以下の通りです：
+          </p>
+          <pre class="bg-muted p-4 rounded-md overflow-x-auto"><code>/
+├── public/             # 静的アセット
+├── src/
+│   ├── components/     # コンポーネント
+│   │   ├── ui/         # shadcnコンポーネント
+│   │   └── examples/   # 例示用コンポーネント
+│   ├── layouts/        # レイアウト
+│   ├── pages/          # ページ
+│   ├── styles/         # グローバルスタイル
+│   └── lib/            # ユーティリティ
+├── astro.config.mjs    # Astro設定
+└── tailwind.config.js  # Tailwind設定</code></pre>
+        </section>
+        
+        <section id="buttons" class="prose dark:prose-invert max-w-none">
+          <h2>ボタン</h2>
+          <p>
+            ボタンは様々なバリエーションとサイズで利用できます。
+            詳細は<a href="/components" class="text-primary hover:underline">コンポーネントページ</a>を参照してください。
+          </p>
+          <div class="not-prose flex gap-4 my-4">
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary text-primary-foreground h-10 px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+              プライマリ
+            </button>
+            <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-input bg-background h-10 px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+              セカンダリ
+            </button>
+          </div>
+        </section>
+        
+        <section id="forms" class="prose dark:prose-invert max-w-none">
+          <h2>フォーム</h2>
+          <p>
+            様々なフォーム要素を利用してユーザー入力を収集できます。
+            詳細は<a href="/form-example" class="text-primary hover:underline">フォーム例ページ</a>を参照してください。
+          </p>
+        </section>
+        
+        <section id="theme" class="prose dark:prose-invert max-w-none">
+          <h2>テーマ</h2>
+          <p>
+            ライト/ダークモードの切り替えに対応しています。
+            右上のテーマトグルボタンでモードを切り替えることができます。
+          </p>
+        </section>
+        
+        <section id="customization" class="prose dark:prose-invert max-w-none">
+          <h2>カスタマイズ</h2>
+          <p>
+            テーマカラーやその他のデザイン要素は、<code>global.css</code>と<code>tailwind.config.js</code>で
+            カスタマイズすることができます。
+          </p>
+        </section>
+        
+        <section id="deployment" class="prose dark:prose-invert max-w-none">
+          <h2>デプロイ</h2>
+          <p>
+            Astroプロジェクトは様々なホスティングプラットフォームにデプロイすることができます：
+          </p>
+          <ul>
+            <li>Vercel</li>
+            <li>Netlify</li>
+            <li>GitHub Pages</li>
+            <li>Cloudflare Pages</li>
+          </ul>
+          <p>
+            詳細は<a href="https://docs.astro.build/en/guides/deploy/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+              Astroデプロイガイド
+            </a>を参照してください。
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</BaseLayout> 

@@ -1,16 +1,78 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Astro + shadcn/ui デモサイト">
+	<section class="py-20 bg-background">
+		<div class="container mx-auto px-4">
+			<div class="max-w-3xl mx-auto text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+						Astro + shadcn/ui
+					</span>
+				</h1>
+				<p class="text-xl mb-10 text-muted-foreground">
+					パフォーマンスとデザインを両立した最高のウェブ開発体験
+				</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<a
+						href="/features"
+						class="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-primary text-primary-foreground h-10 px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+					>
+						特徴を見る
+					</a>
+					<a
+						href="/components"
+						class="inline-flex items-center justify-center whitespace-nowrap rounded-md border border-input bg-background h-10 px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+					>
+						コンポーネント一覧
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 bg-muted/30">
+		<div class="container mx-auto px-4">
+			<h2 class="text-3xl font-bold text-center mb-12">主な特徴</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-card rounded-lg border p-6 shadow-sm">
+					<div class="mb-4 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+					</div>
+					<h3 class="text-xl font-bold mb-2">コンポーネントファースト</h3>
+					<p class="text-muted-foreground">
+						shadcn/uiの再利用可能なコンポーネントでUIを素早く構築
+					</p>
+				</div>
+				<div class="bg-card rounded-lg border p-6 shadow-sm">
+					<div class="mb-4 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 2H2v10h10V2Z"/><path d="M22 12h-8v10h8V12Z"/><path d="M12 12H2v10h10V12Z"/><path d="M22 2h-8v8h8V2Z"/></svg>
+					</div>
+					<h3 class="text-xl font-bold mb-2">Astroアイランド</h3>
+					<p class="text-muted-foreground">
+						Astroのアイランドアーキテクチャでパフォーマンスを最大化
+					</p>
+				</div>
+				<div class="bg-card rounded-lg border p-6 shadow-sm">
+					<div class="mb-4 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+					</div>
+					<h3 class="text-xl font-bold mb-2">ダークモード対応</h3>
+					<p class="text-muted-foreground">
+						美しいカラースキームを持つライト/ダークモードの切り替え
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16">
+		<div class="container mx-auto px-4 text-center">
+			<h2 class="text-3xl font-bold mb-8">今すぐ始めましょう</h2>
+			<p class="text-lg mb-10 max-w-2xl mx-auto text-muted-foreground">
+				Astroとshadcnのパワーを組み合わせて、美しく高性能なウェブサイトを構築しましょう。
+			</p>
+		</div>
+	</section>
+</BaseLayout>
